@@ -1,0 +1,34 @@
+[gd_scene load_steps=6 format=3 uid="uid://dgy283fk3u28s"]
+
+[ext_resource type="Texture2D" uid="uid://cdh6qmnowwemp" path="res://sprites/ApolloSprite.png" id="1_dlqyt"]
+[ext_resource type="Script" path="res://top_down_player.gd" id="1_y6r4e"]
+[ext_resource type="PackedScene" uid="uid://bxg6dn4yw3jni" path="res://interact_bubble.tscn" id="3_ct82m"]
+[ext_resource type="PackedScene" uid="uid://ban7vywbstaf6" path="res://gun.tscn" id="4_s84l4"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_yxb2i"]
+size = Vector2(10, 6)
+
+[node name="TopDownPlayer" type="CharacterBody2D"]
+y_sort_enabled = true
+position = Vector2(0, -8)
+motion_mode = 1
+platform_floor_layers = 4294901761
+platform_wall_layers = 2
+script = ExtResource("1_y6r4e")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_dlqyt")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 5)
+shape = SubResource("RectangleShape2D_yxb2i")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+process_callback = 0
+position_smoothing_enabled = true
+
+[node name="InteractBubble" parent="." instance=ExtResource("3_ct82m")]
+visible = false
+
+[node name="Gun" parent="." instance=ExtResource("4_s84l4")]
+position = Vector2(17, 0)

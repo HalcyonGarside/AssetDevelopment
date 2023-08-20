@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="GunData" load_steps=3 format=3 uid="uid://ch2qi4hpylvsp"]
+
+[ext_resource type="Texture2D" uid="uid://dfxg1nua1dsiu" path="res://sprites/gun.png" id="1_i6p28"]
+[ext_resource type="Script" path="res://gun_data.gd" id="1_m4o6j"]
+
+[resource]
+script = ExtResource("1_m4o6j")
+name = "Default Gun"
+image = ExtResource("1_i6p28")
+hit_damage = 10.0
