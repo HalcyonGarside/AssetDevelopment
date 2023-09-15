@@ -12,23 +12,23 @@ y_sort_enabled = true
 script = ExtResource("1_sdmuf")
 
 [node name="Floor" type="Polygon2D" parent="."]
-position = Vector2(378, 147)
+position = Vector2(20, -66)
 polygon = PackedVector2Array(54, 104, 23, 176, -4, 120, 17, 56, 45, 29, 75, 61, 61, 93)
 
 [node name="TopDownPlayer" parent="." instance=ExtResource("1_4iwq2")]
-position = Vector2(418, 236)
+position = Vector2(60, 23)
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D"]
 material = SubResource("CanvasItemMaterial_702nf")
-position = Vector2(173, 152)
+position = Vector2(-185, -61)
 polygon = PackedVector2Array(53, 20, 26, 96, 90, 140, 176, 116, 155, 73, 105, 100, 95, 28)
 
 [node name="Polygon2D" type="Polygon2D" parent="StaticBody2D/CollisionPolygon2D"]
 
 [node name="Sign" parent="." instance=ExtResource("3_6y01d")]
-position = Vector2(357, 174)
+position = Vector2(-1, -39)
 message = "I'm a sign lol"
 message_name = "Sign"
 image = ExtResource("4_mfb8b")

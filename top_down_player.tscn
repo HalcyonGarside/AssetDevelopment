@@ -1,9 +1,10 @@
-[gd_scene load_steps=6 format=3 uid="uid://dgy283fk3u28s"]
+[gd_scene load_steps=7 format=3 uid="uid://dgy283fk3u28s"]
 
 [ext_resource type="Texture2D" uid="uid://cdh6qmnowwemp" path="res://sprites/ApolloSprite.png" id="1_dlqyt"]
 [ext_resource type="Script" path="res://top_down_player.gd" id="1_y6r4e"]
 [ext_resource type="PackedScene" uid="uid://bxg6dn4yw3jni" path="res://interact_bubble.tscn" id="3_ct82m"]
 [ext_resource type="PackedScene" uid="uid://ban7vywbstaf6" path="res://gun.tscn" id="4_s84l4"]
+[ext_resource type="PackedScene" uid="uid://158lc240blvy" path="res://bullet.tscn" id="5_1las2"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_yxb2i"]
 size = Vector2(10, 6)
@@ -24,7 +25,6 @@ position = Vector2(0, 5)
 shape = SubResource("RectangleShape2D_yxb2i")
 
 [node name="Camera2D" type="Camera2D" parent="."]
-process_callback = 0
 position_smoothing_enabled = true
 
 [node name="InteractBubble" parent="." instance=ExtResource("3_ct82m")]
@@ -32,3 +32,4 @@ visible = false
 
 [node name="Gun" parent="." instance=ExtResource("4_s84l4")]
 position = Vector2(17, 0)
+projectile = ExtResource("5_1las2")

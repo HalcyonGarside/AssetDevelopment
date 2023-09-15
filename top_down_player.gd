@@ -38,8 +38,7 @@ func _process(delta):
 	# Gun Positioning
 	var mouseRay = (get_local_mouse_position()).normalized();
 	gun.position = (mouseRay * 10);
-
-	print_debug(gun.position);
+	gun.rotation = get_angle_to(get_global_mouse_position());
 
 	move_and_slide();
 
